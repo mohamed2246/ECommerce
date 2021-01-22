@@ -4,9 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@drawable/welcome"
+    tools:context=".Register.MainActivity"
+    android:background="@drawable/signup2"
     >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
 
 <ImageView
     android:layout_width="300dp"
@@ -21,24 +31,48 @@
         android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:id="@+id/apps_logan"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginEnd="88dp"
         android:layout_marginTop="150dp"
+        android:layout_centerHorizontal="true"
         android:text="Find,Discoverd,Choose and Buy anything \n online"
         android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="22sp"
         android:textStyle="bold|italic"
 
         />
-    
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_below="@id/apps_logan"
+            android:id="@+id/linear"
+            android:orientation="vertical"
+            >
+
+
+        </LinearLayout>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/main_join_now_btn"
+        android:layout_below="@id/linear"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/button_white"
+        android:padding="20dp"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:text="Join Now"
+        android:textColor="@color/colorPrimary"
+        />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/main_join_btn"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
         android:layout_marginBottom="10dp"
         android:layout_marginRight="15dp"
         android:layout_marginLeft="15dp"
@@ -47,23 +81,26 @@
         android:textAllCaps="false"
         android:textSize="18sp"
         android:text="Already have an Account ? Login"
-        android:textColor="#ffffffff"
+        android:textColor="#FFFFFF"
+        android:layout_below="@id/main_join_now_btn"
         />
 
-    <Button
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/seller_bigan"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/main_join_now_btn"
-        android:layout_above="@id/main_join_btn"
-        android:layout_marginBottom="5dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginLeft="15dp"
-        android:background="@drawable/input_design"
-        android:padding="20dp"
-        android:textAllCaps="false"
-        android:textSize="18sp"
-        android:text="Join Now"
-        android:textColor="#ffffffff"
+        android:layout_marginTop="5dp"
+        android:text="Wants To Become a Seller ?"
+        android:textSize="16sp"
+        android:textColor="@color/whiteColor"
+        android:textStyle="bold"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/main_join_btn"
         />
+    </RelativeLayout>
 
+    </ScrollView>
 </RelativeLayout>

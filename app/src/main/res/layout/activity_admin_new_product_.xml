@@ -4,9 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Admin_new_product_Activity"
+    tools:context=".Admin.Admin_new_product_Activity"
 
     >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
 
         <ImageView
@@ -14,7 +22,6 @@
             android:layout_height="200dp"
             android:id="@+id/select_product_image"
             android:cropToPadding="false"
-            android:scaleType="centerCrop"
             android:src="@drawable/select_product_image"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="70dp"
@@ -81,6 +88,10 @@
             android:textColor="#fff"
             android:background="@drawable/buttons"
             />
+
+        </RelativeLayout>
+
+        </ScrollView>
 
     </RelativeLayout>
 

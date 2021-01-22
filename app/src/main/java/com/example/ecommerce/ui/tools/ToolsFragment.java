@@ -18,7 +18,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
-import com.example.ecommerce.NAVActivity;
+import com.example.ecommerce.Register.resetPassword;
+import com.example.ecommerce.User.NAVActivity;
 import com.example.ecommerce.R;
 import com.example.ecommerce.pervalent.prevalent;
 import com.google.android.gms.tasks.Continuation;
@@ -48,7 +49,7 @@ public class ToolsFragment extends Fragment {
     private ToolsViewModel toolsViewModel;
     CircleImageView profile_image_view;
     EditText name_edite_text, phone_edit_text, address_edit_text;
-    Button saved_btn;
+    Button saved_btn , question_btn;
     TextView profile_change;
     Toolbar toolbar;
     String myUrl = "";
@@ -67,6 +68,8 @@ public class ToolsFragment extends Fragment {
         ((NAVActivity) getActivity()).imageView.setVisibility(View.VISIBLE);
         ((NAVActivity) getActivity()).fab.hide();
         saved_btn = root.findViewById(R.id.Update);
+        question_btn = root.findViewById(R.id.Question);
+
         profile_image_view = root.findViewById(R.id.set_profile_image);
         name_edite_text = root.findViewById(R.id.set_progile_name);
         phone_edit_text = root.findViewById(R.id.set_progile_phone);
@@ -110,6 +113,15 @@ public class ToolsFragment extends Fragment {
                 galary_intent.setAction(Intent.ACTION_GET_CONTENT);
                 galary_intent.setType("image/*");
                 startActivityForResult(galary_intent, galary);
+            }
+        });
+
+        question_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), resetPassword.class);
+                intent.putExtra("check" ,"settings");
+                startActivity(intent);
             }
         });
 

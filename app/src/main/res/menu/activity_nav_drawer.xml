@@ -19,18 +19,15 @@
             android:iconTint="#fff"
             />
 
+
+
         <item
-            android:id="@+id/nav_orders"
-            android:icon="@drawable/orders"
-            android:title="Orders"
+            android:id="@+id/nav_search"
+            android:icon="@drawable/ic_search_black_24dp"
+            android:title="Search"
             android:iconTint="#fff"
             />
-        <item
-            android:id="@+id/nav_catigory"
-            android:icon="@drawable/category"
-            android:title="Catigories"
-            android:iconTint="#fff"
-            />
+
         <item
             android:id="@+id/nav_settings"
             android:icon="@drawable/ic_menu_manage"

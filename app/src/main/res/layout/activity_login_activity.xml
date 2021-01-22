@@ -4,8 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login"
-    tools:context=".login_activity">
+    android:background="@drawable/signup2"
+    tools:context=".Register.login_activity"
+    android:layoutDirection="ltr"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <ImageView
         android:layout_width="300dp"
@@ -13,7 +23,8 @@
         android:src="@drawable/applogo"
         android:id="@+id/login_app_logo"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="120dp"
         />
 
     <EditText
@@ -27,7 +38,7 @@
         android:layout_marginRight="15dp"
         android:hint="Phone Number"
         android:inputType="number"
-        android:textColorHint="@color/colorPrimaryDark"
+        android:textColorHint="#fff"
         android:textSize="19sp"
         android:textStyle="bold"
         android:textColor="#fff"
@@ -45,7 +56,7 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:hint="Password"
-        android:textColorHint="@color/colorPrimaryDark"
+        android:textColorHint="#fff"
         android:textSize="19sp"
         android:textStyle="bold"
         android:textColor="#fff"
@@ -53,7 +64,7 @@
 
         />
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/linear_layout1"
@@ -67,7 +78,7 @@
             android:layout_height="wrap_content"
             style="@style/Material.Drawable.CheckBox"
             android:text="Remember me"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="#fff"
             app:cbd_strokeColor="@color/colorPrimaryDark"
             android:gravity="center_vertical"
             android:textSize="18sp"
@@ -78,15 +89,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/forget_password_link"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="#fff"
             android:textSize="13sp"
             android:textStyle="bold"
-            android:layout_marginLeft="80dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
             android:text="Forget password"
+            android:layout_marginRight="10dp"
             />
 
 
-    </LinearLayout>
+    </RelativeLayout>
 
     <Button
         android:layout_width="match_parent"
@@ -109,7 +122,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/admin_panel_link"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="#fff"
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginLeft="80dp"
@@ -122,7 +135,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/not_admin_panel_link"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="#fff"
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginLeft="80dp"
@@ -132,5 +145,12 @@
         android:layout_marginStart="25dp"
         android:visibility="invisible"
         />
+
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+
 
 </RelativeLayout>

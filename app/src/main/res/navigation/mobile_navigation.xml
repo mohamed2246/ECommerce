@@ -5,6 +5,10 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/home">
 
+
+
+
+
     <fragment
         android:id="@+id/home"
         android:name="com.example.ecommerce.ui.send.Home_new_framgent"
@@ -19,13 +23,13 @@
         android:label="Cart"
         tools:layout="@layout/fragment_cart" />
 
-
-
     <fragment
-        android:id="@+id/nav_orders"
-        android:name="com.example.ecommerce.ui.gallery.GalleryFragment"
-        android:label="Orders"
-        tools:layout="@layout/fragment_orders" />
+        android:id="@+id/nav_search"
+        android:name="com.example.ecommerce.User.searchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search" />
+
+
 
     <fragment
         android:id="@+id/nav_catigory"
@@ -44,5 +48,10 @@
         android:name="com.example.ecommerce.ui.share.ShareFragment"
         android:label="logout"
         tools:layout="@layout/fragment_logout" />
+
+
+
+
+
 
 </navigation>

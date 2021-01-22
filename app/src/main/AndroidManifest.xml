@@ -1,37 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.ecommerce">
+        package="com.example.ecommerce">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
-        android:allowBackup="true"
+
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".product_details_Activity"
-            android:launchMode = "singleInstance"
-
-            />
+        tools:ignore="GoogleAppIndexingWarning"
+        android:hardwareAccelerated="false"
+        android:largeHeap="true"
+        android:allowBackup="true"
+        >
+        <activity android:name=".Sellers.SellerAddNewProducts"></activity>
+        <activity android:name=".Sellers.SellerCatigoryProducts" />
+        <activity android:name=".Sellers.SellerLoginActivity" />
+        <activity android:name=".Sellers.SellerRegisterationActivity" />
+        <activity android:name=".Register.resetPassword" />
+        <activity android:name=".Admin.Admin_Maintain_Product_Activity" />
+        <activity android:name=".Admin.Activity_Admin_User_Product" />
+        <activity android:name=".Admin.Admin_new_orders" />
         <activity
-            android:name=".NAVActivity"
+            android:name=".User.ConfirmFinalOrderActivity"
+            android:parentActivityName=".Register.MainActivity"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".User.product_details_Activity"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".User.NAVActivity"
             android:label="@string/title_activity_nav"
-            android:parentActivityName=".login_activity"
+            android:launchMode="singleInstance"
+            android:parentActivityName=".Register.login_activity"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="adjustPan|adjustResize"
-            android:launchMode = "singleInstance"
-            />
-        <activity android:name=".Admin_Catigory_activity" />
-        <activity android:name=".Admin_new_product_Activity" />
-        <activity android:name=".registrationActivity" />
-        <activity android:name=".login_activity" />
-        <activity android:name=".MainActivity">
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity android:name=".Admin.Admin_Catigory_activity" />
+        <activity android:name=".Admin.Admin_new_product_Activity" />
+        <activity
+            android:name=".Register.registrationActivity"
+            android:windowSoftInputMode="stateUnchanged|adjustResize" />
+        <activity
+            android:name=".Register.login_activity"
+            android:windowSoftInputMode="stateUnchanged|adjustResize">
+
+
+        </activity>
+        <activity android:name=".Register.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
